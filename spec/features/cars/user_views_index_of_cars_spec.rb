@@ -1,8 +1,8 @@
 require_relative '../../rails_helper'
 
-feature 'User views index of all cars.' do 
+feature 'User views index of all cars.' do
   scenario 'All of a car\'s attributes are displayed.' do
-    cobalt = FactoryGirl.create(:car)
+    FactoryGirl.create(:car)
 
     visit cars_path
 

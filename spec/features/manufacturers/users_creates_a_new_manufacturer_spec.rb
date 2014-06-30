@@ -1,6 +1,6 @@
 require_relative '../../rails_helper'
 
-feature 'User creates a new manufacturer.' do 
+feature 'User creates a new manufacturer.' do
   scenario 'Valid name and country are entered.' do
     visit new_manufacturer_path
     fill_in 'Name', with: 'Chevy'
@@ -12,7 +12,7 @@ feature 'User creates a new manufacturer.' do
   end
 
   scenario 'Unavailable value is entered.' do
-    chevy = FactoryGirl.create(:manufacturer)
+    FactoryGirl.create(:manufacturer)
 
     visit new_manufacturer_path
     fill_in 'Name', with: 'Chevy'
