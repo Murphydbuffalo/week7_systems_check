@@ -1,5 +1,6 @@
 class ManufacturersController < ApplicationController
   def index
+    @manufacturers = Manufacturer.order(:created_at)
   end
 
   def new

@@ -1,0 +1,9 @@
+<h3> All Manufacturers </h3>
+
+<div class="index">
+  <ul>
+    <% @manufacturers.each do |m| %>
+      <li><%= "#{m.name} - #{m.country}" %></li>
+    <% end %>
+  </ul>
+</div>
