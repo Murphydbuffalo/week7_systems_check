@@ -2,11 +2,11 @@
 
 FactoryGirl.define do
   factory :car do
-    manufacturer nil
-    model_name "MyString"
-    year 1
-    mileage 1
-    color "MyString"
-    description "MyString"
+    manufacturer 
+    model_name "Cobalt"
+    year 2007
+    mileage 48000
+    color "Yellow"
+    description ""
   end
 end
