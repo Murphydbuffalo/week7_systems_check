@@ -1,23 +1,28 @@
-<h3> Add A Car </h3>
+<div class="header">
+  <h3> Add A Car </h3>
+</div>
 
-<%= form_for @car do |f| %>
+<div class="form">
+  <%= form_for @car do |f| %>
   <%= f.label :model %>:
-  <%= f.text_field :model_name %>
+  <%= f.text_field :model_name %><br>
 
   <%= f.label :manufacturer %>:
-  <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %>
+  <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %><br>
 
   <%= f.label :year %>:
-  <%= f.text_field :year %>
+  <%= f.text_field :year %><br>
 
   <%= f.label :mileage %>:
-  <%= f.text_field :mileage %>
+  <%= f.text_field :mileage %><br>
 
   <%= f.label :color %>:
-  <%= f.text_field :color %>
+  <%= f.text_field :color %><br>
 
   <%= f.label :description %>:
-  <%= f.text_area :description %>
+  <%= f.text_area :description %><br>
 
-  <%= f.submit :'Add Car' %>
-<% end %>
+  <%= f.submit :'Add Car' %><br>
+<% end %> 
+</div>
+
