@@ -2,12 +2,14 @@ require_relative '../../rails_helper'
 
 feature 'User creates a new car.' do 
   scenario 'Valid values are entered/selected.' do
+    chevy = FactoryGirl.create(:manufacturer)
+
     visit new_car_path
-    fill_in 'Model', with: 'Cobalt'
-    fill_in 'Year', with: 2007
-    fill_in 'Mileage', with: 48000
-    fill_in 'Color', with: 'Yellow'
-    select 'Chevy', from: 'manufacturer'
+    fill_in 'car_model_name', with: 'Cobalt'
+    fill_in 'car_year', with: 2007
+    fill_in 'car_mileage', with: 48000
+    fill_in 'car_color', with: 'Yellow'
+    select 'Chevy', from: 'car_manufacturer_id'
     click_on 'Add Car'
 
     expect(page).to have_content('Car Added.')
