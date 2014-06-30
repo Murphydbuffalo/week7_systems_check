@@ -1,0 +1,19 @@
+<h3> All Cars </h3>
+
+<div class="index">
+  <ul>
+    <% @cars.each do |c| %>
+      <li>
+        <p><%= "A  #{c.year} #{c.manufacturer.name} #{c.model_name}." %><p>
+
+        <p><%= "#{c.color}, with #{c.mileage} miles}." %><p>
+
+        <p><%= "#{c.description}" %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<nav>
+  <p><%= link_to 'Add A Car', new_car_path %></p>
+</nav>
