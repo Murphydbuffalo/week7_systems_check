@@ -19,7 +19,7 @@ feature 'User creates a new manufacturer.' do
     fill_in 'Country', with: 'USA'
     click_on 'Add Manufacturer'
 
-    expect(page).to have_content('That manufacturer is already in the database.')
+    expect(page).to have_content('We couldn\'t save your manufacturer!')
   end
 
   scenario 'A field is left blank.' do
@@ -27,6 +27,6 @@ feature 'User creates a new manufacturer.' do
     fill_in 'Name', with: 'Chevy'
     click_on 'Add Manufacturer'
 
-    expect(page).to have_content('Please provide a name and a country.')
+    expect(page).to have_content('We couldn\'t save your manufacturer!')
   end
 end
