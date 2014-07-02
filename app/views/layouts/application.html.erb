@@ -8,7 +8,21 @@
 </head>
 <body>
 
+<div class="header">
+  <h3> Welcome to Car Shark </h3>
+</div>
+
+<div class='flash'>
+  <p><%= flash[:notice] %></p>
+  <p><%= flash[:alert] %></p>
+</div>
+
 <%= yield %>
+
+<nav>
+  <p><%= link_to 'All Cars', cars_path %></p>
+  <p><%= link_to 'All Manufacturers', manufacturers_path %></p>
+</nav>
 
 </body>
 </html>

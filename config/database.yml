@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: car_shark_production
-  username: car_shark
-  password: <%= ENV['CAR_SHARK_DATABASE_PASSWORD'] %>
